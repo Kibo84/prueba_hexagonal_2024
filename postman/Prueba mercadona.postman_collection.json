@@ -1,0 +1,265 @@
+{
+	"info": {
+		"_postman_id": "8cd7decd-deb7-46b1-91cc-7f05d1f7eb8c",
+		"name": "Prueba hexagonal",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26604863"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"enr.boronat@gmail.com\",\n    \"password\": \"P4ssW0rd.\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/auth/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SignUp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstname\": \"Enrique\",\n    \"lastname\": \"Boronat\",\n    \"email\": \"enr.boronat@gmail.com\",\n    \"password\": \"P4ssW0rd.\",\n    \"acceptedTerms\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/auth/signup",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EAN valido",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlbnIuYm9yb25hdEBnbWFpbC5jb20iLCJpYXQiOjE3MTQzNTE0MDIsImV4cCI6MTcxNDM1Mjg0Mn0.YYalCAp7a1iTzDdpwVeG7XonOrE7kaDJrlUTnu2QJIg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/ean/8437008000101",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ean",
+						"8437008000101"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EAN invalido",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlbnIuYm9yb25hdEBnbWFpbC5jb20iLCJpYXQiOjE3MTQzNTE0MDIsImV4cCI6MTcxNDM1Mjg0Mn0.YYalCAp7a1iTzDdpwVeG7XonOrE7kaDJrlUTnu2QJIg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/ean/84370",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ean",
+						"84370"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "all destinos",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlbnIuYm9yb25hdEBnbWFpbC5jb20iLCJpYXQiOjE3MTQzNTE0MDIsImV4cCI6MTcxNDM1Mjg0Mn0.YYalCAp7a1iTzDdpwVeG7XonOrE7kaDJrlUTnu2QJIg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/destinos",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"destinos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search destino",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlbnIuYm9yb25hdEBnbWFpbC5jb20iLCJpYXQiOjE3MTQzNTE0MDIsImV4cCI6MTcxNDM1Mjg0Mn0.YYalCAp7a1iTzDdpwVeG7XonOrE7kaDJrlUTnu2QJIg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/destinos/123e4567-e89b-12d3-a456-426614174020",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"destinos",
+						"123e4567-e89b-12d3-a456-426614174020"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "all productos",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlbnIuYm9yb25hdEBnbWFpbC5jb20iLCJpYXQiOjE3MTQzNTE0MDIsImV4cCI6MTcxNDM1Mjg0Mn0.YYalCAp7a1iTzDdpwVeG7XonOrE7kaDJrlUTnu2QJIg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/productos",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"productos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search producto",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlbnIuYm9yb25hdEBnbWFpbC5jb20iLCJpYXQiOjE3MTQzNTE0MDIsImV4cCI6MTcxNDM1Mjg0Mn0.YYalCAp7a1iTzDdpwVeG7XonOrE7kaDJrlUTnu2QJIg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/productos/123e4567-e89b-12d3-a456-426614174010",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"productos",
+						"123e4567-e89b-12d3-a456-426614174010"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "all proveedores",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlbnIuYm9yb25hdEBnbWFpbC5jb20iLCJpYXQiOjE3MTQzNTE0MDIsImV4cCI6MTcxNDM1Mjg0Mn0.YYalCAp7a1iTzDdpwVeG7XonOrE7kaDJrlUTnu2QJIg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/proveedores",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"proveedores"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search proveedor",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlbnIuYm9yb25hdEBnbWFpbC5jb20iLCJpYXQiOjE3MTQzNTE0MDIsImV4cCI6MTcxNDM1Mjg0Mn0.YYalCAp7a1iTzDdpwVeG7XonOrE7kaDJrlUTnu2QJIg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/proveedores/123e4567-e89b-12d3-a456-426614174000",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"proveedores",
+						"123e4567-e89b-12d3-a456-426614174000"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

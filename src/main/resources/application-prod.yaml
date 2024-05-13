@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: pruebahexagonal
+  flyway:
+    url: jdbc:postgresql://postgres:5432/${DB_NAME}
+    user: ${DB_USER}
+    password: ${DB_PASSWORD}
+    locations: classpath:db/migration
+  datasource:
+    url: jdbc:postgresql://postgres:5432/${DB_NAME}
+    username: ${DB_JPA_USER}
+    password: ${DB_JPA_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    show-sql: ${SHOW_SQL:false}
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  h2:
+    console:
+      enabled: false
+  cache:
+    caffeine:
+      spec: maximumSize=500,expireAfterAccess=5m
